@@ -1,0 +1,32 @@
+<html>
+    <style>
+    .codebox {
+        border:1px solid black;
+        background-color:#EEEEFF;
+        width:800px;
+        height:200px;
+        overflow:auto;    
+        padding:10px;
+    }
+    .codebox pre {
+        font-size:0.9em;
+    </style>
+
+    <div class="codebox"><pre>
+int main(){
+    Dict<std::string, std::string> d;
+    d.update("key", "value");
+    d.update("key2", "value2");
+    
+    for (auto i:d.keys())
+        std::cout << i << std::endl;
+        
+    for (auto i:d.values())
+        std::cout << i << std::endl;
+
+    std::cout << "removing " << d.pop("key2") << '\n';
+    
+    std::cout << d.dictionary["key"] << std::endl;
+    std::cout << d.get("key") << std::endl;
+    </pre></div>
+</html>
